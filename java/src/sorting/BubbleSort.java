@@ -1,24 +1,6 @@
 package sorting;
 
 public class BubbleSort {
-    public static void main(String[] args) {
-        int[] array = {12, 26, 14, 25, 95, 86, 43, 22, 73};
-
-        System.out.print("UnSorted : ");
-        for (int number : array) {
-            System.out.print(number + " ");
-        }
-
-        bubblesort(array);
-
-        System.out.println();
-        System.out.print("Sorted :   ");
-        for (int number : array) {
-            System.out.print(number + " ");
-        }
-
-    }
-
     public static void bubblesort(int[] array) {
         int size = array.length;
         boolean swapped;
@@ -26,7 +8,7 @@ public class BubbleSort {
             swapped = false;
             for (int j = 0; j < size - 1 - i; j++) {
                 if (array[j] > array[j + 1]) {
-                    swap(array, i, j);
+                    swap(array, j, j+1);
                     swapped = true;
                 }
             }
@@ -37,8 +19,9 @@ public class BubbleSort {
     }
 
     public static void swap(int[] array, int i, int j) {
-        int temp = array[j];
-        array[j] = array[j + 1];
-        array[j + 1] = temp;
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 }
+
