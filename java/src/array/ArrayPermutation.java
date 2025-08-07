@@ -21,7 +21,7 @@ class ArrayPermutation {
         System.out.println();
 
         ArrayPermutation obj = new ArrayPermutation();
-        int[] result = obj.buildArray(nums); // ✅ pass nums, not ans
+        int[] result = obj.buildArray(nums);
 
         System.out.print("Output: ");
         for (int i = 0; i < result.length; i++) {
