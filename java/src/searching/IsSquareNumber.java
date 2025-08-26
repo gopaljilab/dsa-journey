@@ -3,7 +3,7 @@ package searching;
 import java.util.Random;
 
 public class IsSquareNumber {
-    public static boolean isSquareNum(int num){
+    static boolean isSquareNum(int num){
         boolean isSquare = false;
         int squareNum;
             int left = 1;
