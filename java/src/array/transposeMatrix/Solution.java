@@ -1,4 +1,4 @@
-package searching.transposeMatrix;
+package array.transposeMatrix;
 
 public class Solution {
     public static int[][] transpose(int[][] matrix){

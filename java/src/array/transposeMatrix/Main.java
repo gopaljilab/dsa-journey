@@ -1,4 +1,4 @@
-package searching.transposeMatrix;
+package array.transposeMatrix;
 
 import java.util.Arrays;
 
