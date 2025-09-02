@@ -1,17 +1,14 @@
 package array.missingNumber;
 
-import java.util.Arrays;
-
-public class Soltution {
-    public int missingNumber(int[] arr){
-        Arrays.sort(arr);
-        int result = 0;
+public class Solution {
+    public int missingNumber(int[] arr) {
+        int n = arr.length ;
+        long sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != (arr[i+1] + 1)){
-                return (arr[i] + 1);
-            }
+            sum += arr[i];
         }
+        long expSum = n * (n + 1) / 2;
 
-        return 0;
+        return (int) (expSum - sum);
     }
 }
