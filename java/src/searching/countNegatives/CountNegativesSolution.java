@@ -4,23 +4,24 @@ public class CountNegativesSolution {
     public int countNegatives(int[][] grid) {
         int gridLength = grid.length;
         int countNegative = 0;
-        for (int i = 0; i < grid.length; i++) {
-            int[] subArray = grid[i];
-            for (int j = 0; j < grid[i].length; j++) {
-                if (subArray[j] < 0) {
-                    countNegative += (subArray.length - countNegative);
-                    break;
-                }
-            }
-            // int left = 0;
-            // int right = subArray.length;
-
-            // while(left<right){
-            //     int mid = left + (right - left);
-
-            //     if(subArray[mid] = -1)
-            // }
+        int index = 0;
+        for (int[] row : grid){
+            index = firstNegative(row);
+            countNegative += (row.length - index);
         }
         return countNegative;
+    }
+
+    public int firstNegative(int[] row){
+        int left = 0; int right = row.length - 1;
+        while (left <= right){
+            int mid = (left + right) / 2;
+            if (row[mid] < 0){
+                right = mid - 1;
+            }else {
+                left = mid + 1;
+            }
+        }
+        return left;
     }
 }
