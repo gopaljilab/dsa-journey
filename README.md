@@ -18,7 +18,7 @@
 | Easy       | 45 ✅   |
 | Medium     | 02 ✅   |
 | Hard       | 00 ✅   |
-| **Total**  | 40 ✅   |
+| **Total**  | 47 ✅   |
 
 *(I’ll keep updating this table as I solve more problems.)*
 
