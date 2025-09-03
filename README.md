@@ -15,7 +15,7 @@
 ## 📈 Progress Tracker
 | Difficulty | Solved |
 |------------|--------|
-| Easy       | 38 ✅   |
+| Easy       | 45 ✅   |
 | Medium     | 02 ✅   |
 | Hard       | 00 ✅   |
 | **Total**  | 40 ✅   |
