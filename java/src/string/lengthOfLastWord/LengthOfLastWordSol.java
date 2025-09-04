@@ -7,7 +7,7 @@ public class LengthOfLastWordSol {
 
         while (sizeOfString >= 0 && s.charAt(sizeOfString) == ' '){
             sizeOfString--;
-        }g
+        }
 
         while (sizeOfString >= 0 && s.charAt(sizeOfString) != ' '){
             lastWordLength++;
