@@ -45,6 +45,8 @@ public class MergeSort {
         }
 
         // Copy sorted temp back to original array
-        System.arraycopy(temp, 0, arr, low, temp.length);
+        for (int i = 0; i < temp.length; i++) {
+            arr[low + i] = temp[i];
+        }
     }
 }
