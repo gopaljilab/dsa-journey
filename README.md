@@ -15,10 +15,10 @@
 ## 📈 Progress Tracker
 | Difficulty | Solved |
 |------------|--------|
-| Easy       | 45 ✅   |
+| Easy       | 53 ✅   |
 | Medium     | 02 ✅   |
 | Hard       | 00 ✅   |
-| **Total**  | 47 ✅   |
+| **Total**  | 55 ✅   |
 
 *(I’ll keep updating this table as I solve more problems.)*
 
