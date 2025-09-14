@@ -1,4 +1,4 @@
-package array.bestTimeBuyOrSellStock;
+package array.besttimeforbuyorsellstock;
 
 import java.util.Arrays;
 

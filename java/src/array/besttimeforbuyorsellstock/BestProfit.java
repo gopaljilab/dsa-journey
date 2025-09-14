@@ -1,6 +1,4 @@
-package array.bestTimeBuyOrSellStock;
-
-import java.util.Arrays;
+package array.besttimeforbuyorsellstock;
 
 public class BestProfit {
     public int bestProfit(int[] prices){
