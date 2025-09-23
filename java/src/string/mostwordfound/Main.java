@@ -1,4 +1,4 @@
-package array.mostwordfound;
+package string.mostwordfound;
 
 import java.util.Arrays;
 

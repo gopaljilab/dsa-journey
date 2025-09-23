@@ -1,4 +1,4 @@
-package array.mostwordfound;
+package string.mostwordfound;
 
 public class MostWordFoundSol {
     public int mostWordFound(String[] sentences){
