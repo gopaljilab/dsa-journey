@@ -2,7 +2,7 @@ package array.minoperationfordivisibleby3;
 
 public class MinimumOperations {
     public int minimumOperations(int[] nums) {
-        int minOperations = 0;
+        /*int minOperations = 0;
         for (int i = 0; i < nums.length; i++) {
             int minOperationForAElement = 0;
             int operationsByDecreasing = 0;
@@ -21,8 +21,15 @@ public class MinimumOperations {
                 }
             }
             minOperationForAElement = Math.min(operationsByIncreasing, operationsByDecreasing);
-            minOperations += minOperationForAElement;
+            minOperations += minOperationForAElement;*/
+        int countOps = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i] % 3 == 0){
+                continue;
+            }else{
+                countOps++;
+            }
         }
-        return minOperations;
+        return countOps;
     }
 }
