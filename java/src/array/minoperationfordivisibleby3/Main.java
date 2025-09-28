@@ -10,5 +10,9 @@ public class Main {
         MinimumOperations minimumOperations = new MinimumOperations();
         int minOperations = minimumOperations.minimumOperations(nums);
         System.out.println("Output : " + minOperations);
+        /*int[] nums2 = {3,6,9};
+        System.out.println("Nums: " + Arrays.toString(nums2));
+        int minOperations2 = minimumOperations.minimumOperations(nums2);
+        System.out.println("Output : " + minOperations2);*/
     }
 }
