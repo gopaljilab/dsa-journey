@@ -10,8 +10,6 @@ public class AddStringSol {
         BigInteger sum = bigNum1.add(bigNum2);
         String result2 = sum.toString();
 
-        System.out.println(result2);
-
         return result2;
     }
 }
