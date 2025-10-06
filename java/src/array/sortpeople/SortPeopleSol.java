@@ -4,7 +4,8 @@ import java.util.*;
 
 public class SortPeopleSol {
     public String[] sortPeople(String[] names, int[] heights){
-        /*Map<Integer, String> stringMap = new HashMap<>();
+        /**
+        Map<Integer, String> stringMap = new HashMap<>();
         String[] result = new String[names.length];
         for (int i = 0; i < names.length; i++) {
             stringMap.put(heights[i], names[i]);
@@ -22,7 +23,7 @@ public class SortPeopleSol {
         }
         return result;*/
 
-        Map<Integer, String> stringMap = new HashMap<>();
+       /* Map<Integer, String> stringMap = new HashMap<>();
         String[] result = new String[heights.length];
         for (int i = 0; i < names.length; i++) {
             stringMap.put(heights[i], names[i]);
@@ -32,6 +33,24 @@ public class SortPeopleSol {
         for (int i = heights.length - 1; i >= 0; i--) {
             result[j++] = stringMap.get(heights[i]);
         }
-        return result;
+        return result;*/
+
+        List<People> peopleList = new ArrayList<>();
+        for (int i = 0; i < names.length; i++) {
+            People people = new People(names[i], heights[i]);
+            peopleList.add(people);
+        }
+
+       Collections.sort(peopleList);
+
+       for (People ppl: peopleList) {
+           System.out.println(ppl.getName() + "   |    " + ppl.getHeight());
+       }
+
+
+
+
+       return null;
+
     }
 }
