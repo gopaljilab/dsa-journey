@@ -5,6 +5,7 @@ import java.util.Map;
 
 class WordPatternSol {
     public boolean wordPattern(String pattern, String s) {
+
         Map<Character, String> stringMap = new HashMap<>();
         String[] wordArray = s.split(" ");
         for (int i = 0; i < pattern.length(); i++) {
