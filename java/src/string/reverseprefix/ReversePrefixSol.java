@@ -17,6 +17,7 @@ public class ReversePrefixSol {
         int right = chIndex;
 
         while (left < right) {
+
             char temp = charsArray[left];
             charsArray[left] = charsArray[right];
             charsArray[right] = temp;
