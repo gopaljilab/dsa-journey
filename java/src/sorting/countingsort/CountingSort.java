@@ -1,33 +1,35 @@
-package sorting;
-
-import java.time.chrono.MinguoDate;
+package sorting.countingsort;
 
 public class CountingSort {
-    public void countingSort(int[] nums){
-        int length = nums.length;
-        if ((nums.length <= 0) || (nums == null)){
-            return;
+
+    public int[] countingSort(int[] nums) {
+        // Base condition
+        if (nums == null || nums.length <= 1) {
+            return nums;
         }
 
+        // Find maximum value
         int max = nums[0];
-        for(int num : nums){
-            if (num > max){
-                num = max;
+        for (int num : nums) {
+            if (num > max) {
+                max = num;
             }
         }
 
-        int[] countArray = new int[max+1];
-        for(int num : nums){
+        // Create and fill frequency array
+        int[] countArray = new int[max + 1];
+        for (int num : nums) {
             countArray[num]++;
         }
 
+        // Rebuild the sorted array
         int index = 0;
         for (int i = 0; i <= max; i++) {
-            while (countArray[i]>0){
-                nums[index] = i;
-                index++;
+            while (countArray[i] > 0) {
+                nums[index++] = i;
                 countArray[i]--;
             }
         }
+        return nums;
     }
 }
