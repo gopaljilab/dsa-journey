@@ -6,24 +6,36 @@ import java.util.TreeSet;
 
 public class MaximumFreqElementsSol {
     public int maxFrequencyElements(int[] nums) {
-       /* Arrays.sort(nums);
-        int occ = 0;
-        for(int i = 0; i < nums.length; i++){
-            int num = nums[i];
-            if(num == nums[i]){
-                continue;
-            }
-            occ++;
-        }
-        return occ;*/
+        if (nums == null || nums.length == 0)
+            return 0;
 
-        Set<Integer> setInteger = new TreeSet<>();
-        for (int num : nums) {
-            boolean isInsert = setInteger.add(num);
-            if (isInsert){
-                System.out.println("yes");
+        if (nums.length == 1)
+            return 1;
+
+        // Find maximum value
+        int max = nums[0];
+        for (int num : nums)
+            if (num > max)
+                max = num;
+
+        // Create and fill frequency array
+        int[] countArray = new int[max+1];
+        for (int num : nums){
+            countArray[num]++;
+        }
+
+        int tempMaxFrequency = 0;
+        int maxFrequency = 0;
+        for (int i = 0; i < countArray.length; i++) {
+            if (countArray[i] > tempMaxFrequency) {
+                tempMaxFrequency = countArray[i];
             }
         }
-        return setInteger.size();
+        for (int i = 0; i < countArray.length; i++) {
+            if (tempMaxFrequency == countArray[i]){
+                maxFrequency += countArray[i];
+            }
+        }
+        return maxFrequency;
     }
 }
