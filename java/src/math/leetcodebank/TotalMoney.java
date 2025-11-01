@@ -3,7 +3,6 @@ package math.leetcodebank;
 import java.util.Scanner;
 
 /**
- *
  * int weeks = n / 7; // total weeks
  * int days = n % 7; // leftover days
  *
@@ -33,13 +32,5 @@ public class TotalMoney {
         int totalDays = days * (2 * (weeks + 1) + (days - 1)) / 2; // leftover days
 
         return totalWeeks + totalDays;
-    }
-
-    public static void main(String[] args) {
-        int n = 20;
-        System.out.println(n);
-        int total = totalMoney(n);
-        System.out.println(total);
-        System.out.println(args.length);
     }
 }
