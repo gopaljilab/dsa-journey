@@ -2,7 +2,7 @@ package array.findMiddleIndex;
 
 public class FIndMiddleIndexSol {
     public int findMiddleIndex(int[] nums) {
-        int size = nums.length;
+        /*int size = nums.length;
         int middleIndex = 0;
         int rightSum;
         int leftSum;
@@ -32,6 +32,24 @@ public class FIndMiddleIndexSol {
             if(leftSum == rightSum){
                 return middleIndex;
             }
+        }
+        return -1;*/
+        int n= nums.length;
+        int sum = 0;
+        for(int num:nums)
+        {
+            sum+=num;
+        }
+
+        int left_sum =0;
+
+        for(int i=0;i<n;i++)
+        {
+            if(left_sum == sum-left_sum-nums[i])
+            {
+                return i;
+            }
+            left_sum += nums[i];
         }
         return -1;
     }
